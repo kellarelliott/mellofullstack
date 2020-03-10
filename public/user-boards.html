@@ -35,6 +35,28 @@
   </div>
   </div>
 
+  <!-- Create Board Modal -->
+  <div class="modal micromodal-slide" id="create-board" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="create-board-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="create-board-title">
+            New board name
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <form type="POST">
+          <main class="modal__content" id="create-board-content">
+            <input id="board-name" placeholder="New board name" type="text">
+          </main>
+          <footer class="modal__footer">
+            <button id="save-board" class="modal__btn modal__btn-primary">Save</button>
+          </footer>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/assets/js/ajax-setup.js"></script>
   <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
