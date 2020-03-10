@@ -11,7 +11,26 @@
 </head>
 
 <body>
-  <p>Hello World!</p>
+  <div class="ui">
+    <header>
+      <h1>Mello</h1>
+    </header>
+    <div class="button-container">
+      <button id="login" class="active">Login</button>
+      <button id="signup">New Account</button>
+    </div>
+    <div class="auth-container">
+      <span id="message"></span>
+      <form method="POST">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" autocorrect="off" spellcheck="false" autocapitalize="off"
+          autofocus="autofocus" placeholder="e.g., arya.stark@mail.wi.wes" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="e.g., ••••••••••••" />
+        <button id="submit" type="submit">Log In</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
