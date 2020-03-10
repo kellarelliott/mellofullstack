@@ -31,9 +31,29 @@ function handleFormSubmit() {
     return;
   }
 
-  console.log(
-    `Email: ${email} Password: ${password} AuthSetting: ${authSetting}`
-  );
+  $emailInput.val('');
+  $passwordInput.val('');
+
+  authenticateUser(email, password);
+}
+
+function displayMessage(message, type) {
+  $message.text(message).attr('class', type);
+}
+
+function authenticateUser(email, password) {
+  $.ajax({
+    url: '/' + authSetting,
+    data: {
+      user: {
+        email,
+        password
+      }
+    },
+    method: 'POST'
+  }).then(function (data) {
+    console.log(data);
+  });
 }
 
 const $submitButton = $('#submit');
