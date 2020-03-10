@@ -1,0 +1,158 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.ui {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+nav {
+  background-color: #0067a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  padding: 10px;
+  height: 40px;
+  color: white;
+}
+
+nav a,
+nav a:visited,
+nav button {
+  text-decoration: inherit;
+  color: inherit;
+  background-color: unset;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav a:focus,
+nav a:visited:focus,
+nav button:focus {
+  outline: white auto 5px;
+  outline-color: white;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.nav--left {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  max-width: 75%;
+}
+
+.ui {
+  background: #ffffff;
+  color: #000000;
+}
+
+header.welcome {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #edeff0;
+  padding: 60px;
+}
+
+header.welcome h1 {
+  font-size: 50px;
+  line-height: 1;
+}
+
+header.welcome h2 {
+  font-size: 35px;
+  line-height: 1;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-end;
+}
+
+.boards {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+}
+
+button {
+  display: inline;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+}
+
+#new-board {
+  background: #61bd4f;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 0 #3f6f21;
+  padding: 0.6em 1.3em;
+  text-decoration: none;
+  border-radius: 3px;
+  line-height: normal;
+  font-size: 1.3em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#new-board:hover {
+  background: #5aac44;
+}
+
+a.board-tile {
+  text-decoration: none;
+  border-radius: 3px;
+  text-align: center;
+  height: 86px;
+  width: 187px;
+  margin: 8px;
+  background-color: #075b8f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.board-tile:hover {
+  background-color: #03395a;
+}
+
+@media (max-width: 649px) {
+  .boards {
+    justify-content: center;
+  }
+
+  a.board-tile {
+    width: 100%;
+  }
+
+  #new-board {
+    width: 100%;
+    height: 86px;
+    margin: 8px;
+  }
+}
