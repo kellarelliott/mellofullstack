@@ -60,7 +60,9 @@ function createLists(lists) {
   let $listContainers = lists.map(function (list) {
     let $listContainer = $('<div class="list">').data('id', list.id);
     let $header = $('<header>');
-    let $headerButton = $('<button>').text(list.title);
+    let $headerButton = $('<button>').text(list.title)
+      .data(list)
+      .on('click', openListEditModal);;
     let $cardUl = createCards(list.cards);
     let $addCardButton = $('<button>Add a card...</button>').on(
       'click',
@@ -156,6 +158,55 @@ function handleCardCreate(event) {
   });
 }
 
+function openListEditModal(event) {
+  let listData = $(event.target).data();
+
+  $editListInput.val(listData.title);
+  $editListSaveButton.data(listData);
+  $editListDeleteButton.data(listData);
+
+  MicroModal.show('edit-list');
+}
+
+function handleListEdit() {
+  event.preventDefault();
+
+  let { title, id } = $(event.target).data();
+  let newTitle = $editListInput.val().trim();
+
+  if (!newTitle || newTitle === title) {
+    MicroModal.close('edit-list');
+    return;
+  }
+
+  $.ajax({
+    url: `/api/lists/${id}`,
+    method: 'PUT',
+    data: {
+      title: newTitle
+    }
+  }).then(function () {
+    init();
+    MicroModal.close('edit-list');
+  });
+}
+
+function handleListDelete() {
+  event.preventDefault();
+
+  let { id } = $(event.target).data();
+
+  $.ajax({
+    url: `/api/lists/${id}`,
+    method: 'DELETE'
+  }).then(function () {
+    init();
+    MicroModal.close('edit-list');
+  });
+}
+
 $saveCardButton.on('click', handleCardCreate);
 $saveListButton.on('click', handleListCreate);
 $logoutButton.on('click', handleLogout);
+$editListSaveButton.on('click', handleListEdit);
+$editListDeleteButton.on('click', handleListDelete);

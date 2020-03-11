@@ -51,6 +51,33 @@
       </div>
     </div>
 
+    <!-- Edit List Modal -->
+    <div class="modal micromodal-slide" id="edit-list" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="edit-list-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="edit-list-title">
+              Edit list
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <form method="POST">
+            <main class="modal__content" id="edit-list-content">
+              <input placeholder="Edit list title" type="text" />
+            </main>
+            <footer class="modal__footer">
+              <button class="modal__btn modal__btn-primary save">
+                Save List
+              </button>
+              <button class="modal__btn modal__btn-danger delete">
+                Delete List
+              </button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Create List Modal -->
     <div class="modal micromodal-slide" id="create-list" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
