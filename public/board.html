@@ -29,6 +29,28 @@
     <div class="container">
     </div>
 
+    <!-- Create Card Modal -->
+    <div class="modal micromodal-slide" id="create-card" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="create-card-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="create-card-title">
+              New card text
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <form method="POST">
+            <main class="modal__content" id="create-card-content">
+              <textarea placeholder="New card text" cols="50" rows="8"></textarea>
+            </main>
+            <footer class="modal__footer">
+              <button class="modal__btn modal__btn-primary save">Save</button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Create List Modal -->
     <div class="modal micromodal-slide" id="create-list" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
