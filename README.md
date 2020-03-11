@@ -1,24 +1,10 @@
-# README
+# Mello
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+The Mello application is a Trello clone. This app will allow users to create an account, create boards, add cards, and invite other users to contribute to boards. Users can change the order of boards and cards by dragging and dropping them. This app uses a back-end Rails API and database.
 
-* Ruby version
+Guest Account Information:
 
-* System dependencies
+Email: mellotest@gmail.com Password: password Technologies used:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+HTML5 CSS3 Javascript jQuery JSON MicroModal Ruby on Rails
