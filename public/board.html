@@ -127,6 +127,35 @@
       </div>
     </div>
 
+    <!-- Contribute Modal -->
+    <div class="modal micromodal-slide" id="contribute" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="contributors-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="contributors-title">
+              Add a Contributor
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content" id="contributors-content">
+            <p class="message hidden"></p>
+            <form method="POST">
+              <div class="form-group">
+                <label for="contributor-email">New contributor email:</label>
+                <input name="contributor-email" id="contributor-email" placeholder="hermione@hogwarts.edu"
+                  type="text" />
+                <button type="submit" class="modal__btn modal__btn-primary save">
+                  Add
+                </button>
+              </div>
+            </form>
+            <h3>Contributors</h3>
+            <ul></ul>
+          </main>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/assets/js/ajax-setup.js"></script>
     <script src="https://unpkg.com/sortablejs@1.8.4/Sortable.min.js"></script>
