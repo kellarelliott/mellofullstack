@@ -1,0 +1,185 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.ui {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+.ui {
+  background-color: #0079bf;
+  color: #eee;
+}
+
+nav {
+  background-color: #0067a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  padding: 10px;
+  height: 40px;
+}
+
+nav a,
+nav a:visited,
+nav button {
+  text-decoration: inherit;
+  color: inherit;
+  background-color: unset;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav a:focus,
+nav a:visited:focus,
+nav button:focus {
+  outline: white auto 5px;
+  outline-color: white;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.nav--left {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  max-width: 75%;
+}
+
+header {
+  height: 40px;
+  padding-left: 10px;
+}
+
+.container {
+  display: flex;
+  overflow-x: auto;
+  height: calc(100% - 100px);
+}
+
+.container > * {
+  flex: 0 0 auto;
+  margin-left: 10px;
+}
+
+.list {
+  width: 300px;
+  height: calc(100% - 10px - 17px);
+}
+
+.list > * {
+  background-color: #e2e4e6;
+  color: #333;
+  padding: 0 10px;
+  position: relative;
+}
+
+.list.add > button {
+  height: 40px;
+  text-align: left;
+  background-color: #025c91;
+  font-weight: 100;
+  color: #ffffffcc;
+}
+
+.list.add > button:focus {
+  outline: white auto 5px;
+  outline-offset: -5px;
+}
+
+.list header,
+.list.add > button {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+
+.list:not(.add) > header > button {
+  width: 100%;
+  margin-top: 4px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+.list:not(.add) > button:last-child {
+  width: 100%;
+  line-height: 36px;
+}
+
+.list:not(.add):not(.ghost) > button:last-child {
+  display: block;
+  outline-offset: -5px;
+  text-align: left;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #888;
+  cursor: pointer;
+}
+
+.list ul {
+  list-style: none;
+  margin: 0;
+  max-height: calc(100% - 36px - 36px);
+  overflow-y: auto;
+}
+
+.list li {
+  cursor: pointer;
+  white-space: pre-wrap;
+}
+
+.list > ul > li.ghost > * {
+  background: #d6dce0;
+  color: #d6dce0;
+  outline: none;
+}
+
+.list li > button {
+  width: calc(100% - 8px);
+  margin: 4px;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.list.ghost > *,
+.list.ghost button {
+  background: #0067a3;
+  color: #0067a3;
+}
+
+button {
+  display: inline;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+  background-color: inherit;
+}
+
+.hidden {
+  visibility: hidden;
+}
