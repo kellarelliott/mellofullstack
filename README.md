@@ -8,3 +8,5 @@ Guest Account Information:
 Email: mellotest@gmail.com Password: password Technologies used:
 
 HTML5 CSS3 Javascript jQuery JSON MicroModal Ruby on Rails
+
+![Image description](/mello.png)
